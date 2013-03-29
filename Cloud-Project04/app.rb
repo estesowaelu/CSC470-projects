@@ -30,10 +30,10 @@ class SNSClient
 				delete_topic(sns, sns2, beta)
 				print_topics(sns)
 
-				email1 = 'tfhoneywell@gmail.com'
-				email2 = 'peter.depasquale@gmail.com'
-				sms1 = '19738658227'
-				http1 = 'http://cloud.comtor.org/csc470logger/logger'
+				email1 = 'address01@example.com'
+				email2 = 'address02@example.com'
+				sms1 = '###########'
+				http1 = 'http://endpoint.example.com'
 
 				# subscription
 				e1sub = subscribe_topic(sns, alpha, 'email', email1)
@@ -41,9 +41,13 @@ class SNSClient
 				e3sub = subscribe_topic(sns, alpha, 'sms', sms1)
 				e4sub = subscribe_topic(sns, alpha, 'http', http1)
 
+				puts "You have one minute to confirm your subscriptions..."
+				puts "... starting...... NOW!"
+				sleep(60)
+
 				# subscription confirmation
-				e1con = confirm_subscription(sns, alpha, email1)
-				e2con = confirm_subscription(sns, alpha, email2)
+				# e1con = confirm_subscription(sns, alpha, email1)
+				# e2con = confirm_subscription(sns, alpha, email2)
 				# e3con = confirm_subscription(sns, alpha, sms1)
 				# e4con = confirm_subscription(sns, alpha, http1)
 
